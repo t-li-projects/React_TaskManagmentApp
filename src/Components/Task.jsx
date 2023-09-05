@@ -93,13 +93,13 @@ export function Task({ text, setTaskList, taskList, id, isChecked }) {
          </button>
 
          <button onClick={handleMoveUp} >
-            <span className="material-symbols-outlined  text-[24px] relative top-1">
+            <span className="material-symbols-outlined  text-[20px] relative top-1">
                keyboard_arrow_up
             </span>
          </button>
 
          <button onClick={handleMoveDown}>
-            <span className="material-symbols-outlined  text-[24px] relative top-1">
+            <span className="material-symbols-outlined  text-[20px] relative top-1">
                keyboard_arrow_down
             </span>
          </button>
