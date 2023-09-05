@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'monomaniacone-regular';
+  src: url('/src/assets/fonts/monomaniacone-regular.ttf') format('truetype');
+}
+
+* {
+  font-family: monomaniacone-regular;
+}
+
+body {
+  background-color: #A682FF;
+  padding: 3.3rem;
+  scroll-behavior: smooth;
+}
+
+.border-large {
+  @apply border-black border-[3px] rounded-lg shadow-md
+}
+
+.border-regular {
+  @apply border-black border-2 rounded-md shadow-sm
+}
+
+.border-small {
+  @apply border-black border-2 rounded-sm shadow-sm
+}
+
+.task {
+  transition: transform 0.15s ease-in-out;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.checked {
+  @apply text-slate-400 line-through
+}
+
+
+#inputPreview {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.css-checkbox {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.css-checkbox+label {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  height: 25px;
+}
+
+.css-checkbox+label::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.css-checkbox:checked+label::after {
+  content: " ";
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjMDA2YmVkIiBkPSJNMCA5NkMwIDYwLjY1IDI4LjY1IDMyIDY0IDMySDM4NEM0MTkuMyAzMiA0NDggNjAuNjUgNDQ4IDk2VjQxNkM0NDggNDUxLjMgNDE5LjMgNDgwIDM4NCA0ODBINjRDMjguNjUgNDgwIDAgNDUxLjMgMCA0MTZWOTZ6Ii8+PC9zdmc+");
+  background-repeat: no-repeat;
+  background-size: 13px 13px;
+  background-position: center center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+  left: -2px;
+  top: 2px;
+  text-align: center;
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+}
