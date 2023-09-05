@@ -87,19 +87,27 @@ export function Task({ text, setTaskList, taskList, id, isChecked }) {
       {/* task options */}
       <div className="w-[220px] hidden gap-1 group-hover:flex opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out justify-end py-1 sm:py-0">
          <button onClick={() => handleEdit()} >
-            <img src="./src/assets/images/edit-task.svg" alt="edit" className="scale-[0.8]" />
+            <span className="material-symbols-outlined text-[21px] relative top-1">
+               edit
+            </span>
          </button>
 
          <button onClick={handleMoveUp} >
-            <img src="./src/assets/images/move-up.svg" alt="move up" />
+            <span className="material-symbols-outlined  text-[24px] relative top-1">
+               keyboard_arrow_up
+            </span>
          </button>
 
          <button onClick={handleMoveDown}>
-            <img src="./src/assets/images/move-down.svg" alt="move down" />
+            <span className="material-symbols-outlined  text-[24px] relative top-1">
+               keyboard_arrow_down
+            </span>
          </button>
 
          <button onClick={handleDelete} >
-            <img src="./src/assets/images/delete-task.svg" alt="delete" className="scale-[0.85]" />
+            <span className="material-symbols-outlined text-[21px] relative top-1">
+               delete
+            </span>
          </button>
 
       </div>
